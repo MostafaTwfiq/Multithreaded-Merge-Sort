@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MergeSortMultithreaded.dir/main.c.obj"
-  "MergeSortMultithreaded.exe"
-  "MergeSortMultithreaded.exe.manifest"
+  "CMakeFiles/MergeSortMultithreaded.dir/main.c.o"
+  "MergeSortMultithreaded"
   "MergeSortMultithreaded.pdb"
-  "libMergeSortMultithreaded.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

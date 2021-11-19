@@ -2,12 +2,13 @@
 #include <malloc.h>
 #include "string.h"
 #include <pthread.h>
+#include <stdlib.h>
 
 typedef struct Param {
     int *arr, s, e;
 } Param;
 
-void mergeSort(void *p) {
+void *mergeSort(void *p) {
     Param *param = (Param *) p;
     int *arr = param->arr;
     int s = param->s, e = param->e;
@@ -19,7 +20,7 @@ void mergeSort(void *p) {
 
     Param newParam1 = {arr, s, fHalfEnd};
     Param newParam2 = {arr, fHalfEnd + 1, e};
-    int th1ID, th2ID;
+    pthread_t th1ID, th2ID;
     pthread_create(&th1ID, NULL, mergeSort, &newParam1);
     pthread_create(&th2ID, NULL, mergeSort, &newParam2);
 
@@ -45,7 +46,7 @@ void mergeSort(void *p) {
 }
 
 int main() {
-    char path[] = "C:\\Users\\mosta\\CLionProjects\\MergeSortMultithreaded\\input.txt";
+    char path[] = "input.txt";
     int size, *arr;
     FILE *f = fopen(path, "r");
     if (!f) {
@@ -66,21 +67,25 @@ int main() {
         arr[i] = temp;
     }
 
-    if (size == 1)
-        goto Finish;
+    if (size > 1) {
+        Param param = {arr, 0, size};
+        pthread_t thID;
+        pthread_create(&thID, NULL, mergeSort, &param);
 
-    Param param = {arr, 0, 10};
-    mergeSort(&param);
+        if (pthread_join(thID, NULL))
+            fprintf(stderr, "Some thing went wrong.");
 
-    Finish:
+    }
+
     if (!ansFile) {
         fprintf(stderr, "Can't create the answer file.");
         exit(-1);
     }
 
+    printf("H");
     fprintf(ansFile, "Sorted array: ");
     for (int i = 0; i < size; i++)
-        fprintf(ansFile, "%d%c", arr[i], i == size - 1 ? '\0' : ' ');
+        fprintf(ansFile, "%d%c", arr[i], i == size - 1 ? EOF : ' ');
 
     free(arr);
     fclose(f);

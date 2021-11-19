@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/mosta/CLionProjects/MergeSortMultithreaded/main.c" "C:/Users/mosta/CLionProjects/MergeSortMultithreaded/cmake-build-debug/CMakeFiles/MergeSortMultithreaded.dir/main.c.obj"
+  "/home/mostafa/CLionProjects/Multithreaded-Merge-Sort/main.c" "/home/mostafa/CLionProjects/Multithreaded-Merge-Sort/cmake-build-debug/CMakeFiles/MergeSortMultithreaded.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

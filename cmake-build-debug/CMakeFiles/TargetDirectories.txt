@@ -1,3 +1,3 @@
-C:/Users/mosta/CLionProjects/MergeSortMultithreaded/cmake-build-debug/CMakeFiles/MergeSortMultithreaded.dir
-C:/Users/mosta/CLionProjects/MergeSortMultithreaded/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mosta/CLionProjects/MergeSortMultithreaded/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mostafa/CLionProjects/Multithreaded-Merge-Sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mostafa/CLionProjects/Multithreaded-Merge-Sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mostafa/CLionProjects/Multithreaded-Merge-Sort/cmake-build-debug/CMakeFiles/MergeSortMultithreaded.dir
