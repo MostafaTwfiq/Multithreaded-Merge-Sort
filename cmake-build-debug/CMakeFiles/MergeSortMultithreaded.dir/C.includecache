@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mosta/CLionProjects/MergeSortMultithreaded/main.c
+stdio.h
+-
+malloc.h
+-
+string.h
+C:/Users/mosta/CLionProjects/MergeSortMultithreaded/string.h
+
